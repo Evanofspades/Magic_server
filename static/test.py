@@ -1,8 +1,4 @@
 from flask import Flask, jsonify, request, render_template, redirect, url_for, send_file
-from datetime import datetime, timedelta
-import threading
-import time
-import os
 
 
 app = Flask(__name__)
@@ -32,7 +28,7 @@ def imag():
 @app.route("/image/", methods=['GET', "POST"])
 def imagg():
     # return redirect(url_for('static', filename="test1.jpg"))
-    return send_file("C:\\Users\\ekouk\\PycharmProjects\\buget\\website\\static\\test1.jpg", as_attachment=True)
+    return send_file("C:\\Users\ekouk\\PycharmProjects\\Magic_server\\static\\test1.jpg", as_attachment=True)
 
 
 
@@ -47,18 +43,18 @@ def imagsssg():
 
 
 
-@app.route('/download')
-def download():
-    path = "C:\\Users\\ekouk\\PycharmProjects\\buget\\website\\static\\test.py"
-    return send_file(path, as_attachment=True)
-
-
+# @app.route('/download')
+# def download():
+#     path = "C:\\Users\\ekouk\\PycharmProjects\\buget\\website\\static\\test.py"
+#     return send_file(path, as_attachment=True)
+#
+#
 
 
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0")
+    app.run(host="192.168.1.211", port="2525", debug=True)
 
 
 
